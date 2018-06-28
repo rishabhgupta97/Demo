@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="hibernatenamedqueryexample.Student" table="xmlStudent">
+        <id name="id"></id>
+        <property name="name"></property>
+        <property name="phone"></property>
+    </class>
+ <query name="query1">
+        <[CDATA[
+            from Student student  s where s.id = :id
+        ]]
+    </query>
+</hibernate-mapping>
