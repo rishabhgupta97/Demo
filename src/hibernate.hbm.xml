@@ -6,14 +6,13 @@
 
 <hibernate-mapping>
 
-    <class name="hibernatenamedqueryexample.Student" table="xmlStudent">
+    <class name="hibernatenamedqueryexample.Student" table="xmlStudent1">
+        <cache usage="read-only"></cache>
         <id name="id"></id>
         <property name="name"></property>
         <property name="phone"></property>
     </class>
- <query name="query1">
-        <[CDATA[
-            from Student student  s where s.id = :id
-        ]]
-    </query>
+ <query name="query1">  
+<![CDATA[from Student s where s.id = :id]]>  
+</query>  
 </hibernate-mapping>
